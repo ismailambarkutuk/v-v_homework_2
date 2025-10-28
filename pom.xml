@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.vv</groupId>
   <artifactId>hw2-java</artifactId>
@@ -9,9 +7,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <junit.jupiter.version>5.10.2</junit.jupiter.version>
-    <pitest.version>1.16.0</pitest.version>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -20,7 +16,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -31,23 +26,6 @@
           <includes>
             <include>**/*Test.java</include>
           </includes>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.pitest</groupId>
-        <artifactId>pitest-maven</artifactId>
-        <version>${pitest.version}</version>
-        <configuration>
-          <targetClasses>
-            <param>edu.vv.hw2.*</param>
-          </targetClasses>
-          <targetTests>
-            <param>edu.vv.hw2.*</param>
-          </targetTests>
-          <reportsDirectory>${project.build.directory}/pit-reports</reportsDirectory>
-          <mutators>
-            <mutator>STRONGER</mutator>
-          </mutators>
         </configuration>
       </plugin>
     </plugins>
