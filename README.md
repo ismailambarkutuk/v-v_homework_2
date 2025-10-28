@@ -1,4 +1,4 @@
-# HW2 Java Minimal Project
+# HW2 Java Minimal Project (No Mutation Config)
 
 - Two basis-path methods with cyclomatic complexity ≈ 5:
   - `ShippingCalculator.calculateShipping(...)`
@@ -10,9 +10,3 @@
 ```bash
 mvn -q -DskipTests=false test
 ```
-
-## Mutation testing (PIT)
-```bash
-mvn -q org.pitest:pitest-maven:mutationCoverage
-```
-Reports in `target/pit-reports/`.
